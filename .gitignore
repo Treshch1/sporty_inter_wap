@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+.pytest_cache
+__pycache__
+.DS_Store
+*.py[cod]
+*$py.class
+bin/
+include/
+lib/
+
+# folders
+.idea
+.pytest_cache/
+
+# reporting
+report/
+report_screenshots/
+report.xml
+test.log
+
+# logs
+*.log
+
+# secure
+secure.json
+
+# env
+/venv/
+/tests/report.xml
+.env
+pyvenv.cfg
+
+# node
+node_modules
+package-lock.json
+package.json
+
+# IDE
+.history

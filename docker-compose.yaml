@@ -1,0 +1,17 @@
+name: automation-selenium
+services:
+  tests:
+    image: automation-selenium-tests:latest
+    build: .
+    working_dir: /opt/automation
+    volumes:
+      - .:/opt/automation:rw
+    command: ["pytest", "--headless", "tests"]
+    user: "1000"
+    network_mode: host
+    init: true
+    cap_add:
+      - SYS_ADMIN
+    ipc: host
+    environment:
+      HOME: /tmp

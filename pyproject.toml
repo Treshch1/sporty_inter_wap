@@ -1,0 +1,23 @@
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+   \.pytest_cache
+  | htmlcov
+  | test-results
+)/
+'''
+
+[tool.isort]
+profile = 'black'
+line_length = 120
+lines_between_types = 1
+lines_after_imports = 2
+
+[tool.pylama]
+format = 'pycodestyle'
+skip = '*/.tox/*,*/.env/*,*/migrations/*,splinter-tests/*,*/tests/*'
+linters = 'pycodestyle,pyflakes,mccabe'
+
+[tool.pylama.linter.pycodestyle]
+max_line_length = 120

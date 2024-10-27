@@ -1,0 +1,14 @@
+selenium
+pytest
+requests
+allure-pytest
+ipdb
+python-environ
+setuptools
+pytest-repeat
+
+
+pre-commit
+isort
+black
+pylama[toml]

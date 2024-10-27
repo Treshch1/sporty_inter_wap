@@ -1,0 +1,33 @@
+default_language_version:
+  python: python
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-toml
+      - id: check-yaml
+        args:
+        - --unsafe
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+      - id: black
+        pass_filenames: false
+        args: [.]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+  - repo: https://github.com/gvanderest/pylama-pre-commit
+    rev: 0.1.2
+    hooks:
+      - id: pylama
+        additional_dependencies:
+          - mccabe
+          - pycodestyle
+          - pyflakes
+          - toml
